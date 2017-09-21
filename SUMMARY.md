@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [Components](chapter1.md)
-* Local State Management
-* Lifting State Between Components
+* [Components](Components.md)
+* [Local State Management](Local State Management.md)
+* [Lifting State Between Components](Lifting State Between Components.md)
 

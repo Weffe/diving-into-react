@@ -7,4 +7,3 @@ GitBook: https://weffe.gitbooks.io/diving-into-react/content/
 ---
 
 Author: Michael Negrete
-
