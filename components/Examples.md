@@ -113,7 +113,7 @@ class Counter extends React.Component {
       return { value: prevState.value + 1 }
     })
 
-    // using arrow functions
+    // using arrow functions (preferred)
     // this.setState((prevState) => { 
     //   return { value: prevState.value + 1 }
     // })
