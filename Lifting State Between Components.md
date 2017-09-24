@@ -40,7 +40,7 @@ export default class Counter extends Component {
 }
 ```
 
-[![Edit Lifting State Up](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/72v16omrn6?module=%2FCounter.js&view=preview)
+[![Edit Lifting State Up](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/72v16omrn6?module=%2FCounter.js)
 
 ## Yes, functions can be passed in as a Prop! Just like functions can be passed off as callbacks :)
 
@@ -83,3 +83,5 @@ export default class Parent extends Component {
 
 }
 ```
+
+[![Edit Lifting State Up](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/72v16omrn6?module=%2FParent.js)
