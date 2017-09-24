@@ -97,8 +97,6 @@ class Counter extends Component {
   }
 
   incrementBy3_good = () => {
-    // this will not work as React batches updates into 1 single call to preserve efficiency
-
     // using a normal function
     this.setState(function (prevState) {
       return { value: prevState.value + 1 }
