@@ -6,6 +6,8 @@
   * [What makes up a Component](components/What makes up a Component.md)
     * [constructor](components/constructor.md)
     * [componentDidMount](components/componentDidMount.md)
+    * [render](components/render.md)
+    * [setState](components/setState.md)
 * [Local State Management](Local State Management.md)
 * [Lifting State Between Components](Lifting State Between Components.md)
 
