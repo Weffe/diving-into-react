@@ -25,6 +25,7 @@ import React, { Component } from 'react'
 // if you do NOT need to access this.props in the constructor
 class Panel extends Component {
   constructor() {
+    super()
     this.state = { ledOn: false }
   }
 }
