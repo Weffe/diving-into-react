@@ -6,11 +6,11 @@ Let's go over a few simple examples to get you warmed up to the idea of a "Compo
 
 ```js
 // index.js
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Hello from './Hello';
 
-class App extends React.Component {
+class App extends Component {
   render() {
     return (
       <div>
@@ -27,9 +27,9 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ```js
 // Hello.js
-import React from 'react';
+import React, { Component } from 'react';
 
-class Hello extends React.Component {
+class Hello extends Component {
   render() {
     return(
       <h1>Hey there {this.props.name}!</h1>
@@ -48,11 +48,11 @@ export default Hello
 
 ```js
 // index.js
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Counter from './Counter';
 
-class App extends React.Component {
+class App extends Component {
   render() {
     return (
       <div>
@@ -70,7 +70,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ```js
 // Counter.js
-import React from 'react';
+import React, { Component } from 'react';
 
 const styles = {
   border: '1px solid black',
@@ -78,28 +78,25 @@ const styles = {
   padding: 5
 }
 
-class Counter extends React.Component {
+class Counter extends Component {
   constructor(props) {
     super(props)
 
     this.state = { value: 0 }
-    this.increment = this.increment.bind(this)
-    this.incrementBy3_bad = this.incrementBy3_bad.bind(this)
-    this.incrementBy3_good = this.incrementBy3_good.bind(this)
   }
 
-  increment() {
+  increment = () => {
     this.setState({ value: this.state.value + 1 })
   }
 
-  incrementBy3_bad() {
+  incrementBy3_bad = () => {
     // this will not work as React batches updates into 1 single call to preserve efficiency
     this.setState({ value: this.state.value + 1 })
     this.setState({ value: this.state.value + 1 })
     this.setState({ value: this.state.value + 1 })
   }
 
-  incrementBy3_good() {
+  incrementBy3_good = () => {
     // this will not work as React batches updates into 1 single call to preserve efficiency
 
     // using a normal function
@@ -127,11 +124,14 @@ class Counter extends React.Component {
   }
 
   render() {
+    const { name } = this.props
+    const { value } = this.state
+
     return(
       <div style={styles}>
 
-        <h2 style={{color: 'blue'}}>{this.props.name}</h2>
-        <div>Value: {this.state.value}</div>
+        <h2 style={{color: 'blue'}}>{name}</h2>
+        <div>Value: {value}</div>
 
         <button onClick={this.increment}>increment by 1</button>
         <button onClick={this.incrementBy3_bad}>increment by 3 (Bad)</button>
